@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eyeris</title>
+    <link rel="shortcut icon" href="Croc Eye sqare.jpg" type="image/x-icon">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="font.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <video
+        src="Eyeris Media Logo Animation compressed.mp4"
+        autoplay
+        muted
+        playsinline
+      ></video>
+
+      <img
+        id="overlayImage"
+        src="White 2024 Eyeris media logo.png"
+        alt="Overlay Logo"
+      />
+      <p>Press any key to continue...</p>
+    </div>
+    <div id="nav">
+      <div id="links">
+        <h3 onclick="window.location.href='WhoWeAre.html'">Who we are</h3>
+        <h3 onclick="window.location.href='WhatWeDo.html'">What we do</h3>
+        <div id="active">
+          <h3 onclick="window.location.href='OurWork.html'">Our Work</h3>
+        </div>
+        <img
+          onclick="window.location.href='index.html'"
+          src="White 2024 Eyeris media logo.png"
+          alt=""
+        />
+        <h3 onclick="window.location.href='ImmersiveMedia.html'">
+          Immersive Media
+        </h3>
+        <h3 onclick="window.location.href='WorkShopsAndEvents.html'">Events</h3>
+        <div
+          id="join-us"
+          class="glass-btn"
+          onclick="window.location.href='ContactUs.html'"
+        >
+          Contact Us
+        </div>
+      </div>
+      <div id="icons">
+        <!-- <img src="hamburger.svg" alt="" /> -->
+      </div>
+    </div>
+    <div id="nav2">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <img
+        src="White 2024 Eyeris media logo.png"
+        alt=""
+        style="
+          width: 70px;
+          position: relative;
+          top: 0%;
+          left: 90%;
+          transform: translate(-50%, -75%);
+          z-index: 100000;
+        "
+        onclick="window.location.href='index.html'"
+      />
+
+      <div class="menu-panel" id="menuPanel">
+        <ul class="nav-links2" id="navLinks2">
+          <li><a href="WhoWeAre.html">Who we are</a></li>
+          <li><a href="WhatWeDo.html">What we do</a></li>
+          <li><a href="OurWork.html">Our work</a></li>
+          <li><a href="ImmersiveMedia.html">Immersive media</a></li>
+          <li><a href="WorkShopsAndEvents.html">Events</a></li>
+          <li><a href="ContactUS.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div id="home">
+        <div class="video-slider">
+          <div class="slides">
+            <video autoplay muted loop>
+              <source
+                src="./videos/Living with crocs video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img id="playImg" class="play1" src="play.svg" alt="" />
+            <div id="overlayText1">
+              <h1>Living with crocs</h1>
+              <!-- <br /> -->
+              <p>A tale of conversation...</p>
+            </div>
+            <video autoplay muted loop>
+              <source src="videos/Beyond One.mp4" type="video/mp4" />
+            </video>
+            <div id="overlayText2">
+              <h1>Beyond One</h1>
+              <p>The reign of the four kings...</p>
+            </div>
+            <div id="overlayText3">
+              <h1>Immerssive Fangs</h1>
+              <p>A king cobra resue in 360° VR...</p>
+            </div>
+            <div id="overlayText4">
+              <h1>Clean Sweep</h1>
+              <p>Dignifying sanitation work...</p>
+            </div>
+            <div id="overlayText5">
+              <h1>Defanged</h1>
+              <p>Taking the bite off snake myths...</p>
+            </div>
+            <div id="overlayText6">
+              <h1>Solar Community Hub</h1>
+              <p>
+                Bridging the digital divide in <br />
+                public schools...
+              </p>
+            </div>
+            <div id="overlayText7">
+              <h1>KCRE</h1>
+              <p>Realising a dream to conserve...</p>
+            </div>
+            <div id="overlayText8">
+              <h1>ABCD</h1>
+              <p>Conservation begins with the basics...</p>
+            </div>
+            <div id="overlayText9">
+              <h1>MERM</h1>
+              <p>
+                A developmental insight into <br />
+                public health...
+              </p>
+            </div>
+            <div id="overlayText10">
+              <h1>My Tree</h1>
+              <p>An afforestation programme by <br />public schools...</p>
+            </div>
+            <div id="overlayText11">
+              <h1>Redifining public education</h1>
+              <p>Walkthrough of a model <br />government school...</p>
+            </div>
+            <div id="overlayText12">
+              <h1>Reclaiming Legacy</h1>
+              <p>A battle agains waste in the Himalayan <br />foothills...</p>
+            </div>
+            <div id="overlayText13">
+              <h1>Role mo'Dell's</h1>
+              <p>Today's youth, <br />tomorrow's green innovators...</p>
+            </div>
+
+            <img id="playImg" class="play2" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source src="/videos/Immersive Fangs_1.mp4" type="video/mp4" />
+            </video>
+            <img id="playImg" class="play3" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/Cleen Sweep video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img id="playImg" class="play4" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/Defanged video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img id="playImg" class="play5" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/Dell Solar Hub video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img id="playImg" class="play6" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source src="/videos/KCRE video thumbnail.mp4" type="video/mp4" />
+            </video>
+            <img id="playImg" class="play7" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source src="/videos/ABCD video thumbnail.mp4" type="video/mp4" />
+            </video>
+            <img id="playImg" class="play8" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source src="/videos/MERM overview.mp4" type="video/mp4" />
+            </video>
+            <img id="playImg" class="play9" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/MyTree video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img class="play10" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/Public education video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img class="play11" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/Reclaiming Legacy video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img class="play12" src="play.svg" alt="" />
+            <video autoplay muted loop>
+              <source
+                src="/videos/Role mo’Dell’s video thumbnail.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <img class="play13" src="play.svg" alt="" />
+          </div>
+
+          <!-- Navigation buttons -->
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+
+          <!-- Dots -->
+          <div class="dots" style="opacity: 0; z-index: -10000000"></div>
+        </div>
+      </div>
+
+      <div class="page1">
+        <div class="box1">
+          <div>
+            <h2>WHO WE ARE</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="bottom1">
+          <div class="left">
+            Through powerful visual storytelling, hands-on workshops, impactful
+            campaigns and responsible journalism,
+            <b
+              >Eyeris supports changemakers across the development spectrum in
+              showcasing their impact to the world-to witness, appreciate and
+              emulate.</b
+            >
+            <br /><br />
+
+            With the <b>Sustainable Development</b> Goals (SDGs) as our
+            blueprint, <b>we create Development Insights</b> for governments,
+            corporations, NGOs, academia, civil society, grassroots communities,
+            and others
+            <b>who share our commitment to making the world a better place.</b>
+
+            <br />
+            <br />
+            <h1>
+              "We are Eyeris, and we create <br />
+              Development Insights."
+            </h1>
+          </div>
+          <div class="right">
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 380px;
+              "
+            >
+              <img
+                src="./SDGs - gif/E_GIF_13.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_04.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_03.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_06.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_07.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_11.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_14.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_15.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+              <img
+                src="./SDGs - gif/E_GIF_17.gif"
+                alt="SDG 13 GIF"
+                style="width: 100%; height: auto"
+              />
+            </div>
+
+            <h2>
+              The 9 SDGs that define our <br />
+              Development Insights
+            </h2>
+          </div>
+        </div>
+        <div class="btndiv">
+          <button class="learn-btn" onclick="window.location.href='WhoWeAre.html'">
+            Learn more
+          </button>
+        </div>
+      </div>
+      <div class="page2">
+        <div class="box1">
+          <div>
+            <h2>WHAT WE DO</h2>
+            <div class="line"></div>
+          </div>
+          <p>
+            With the goal of empowering organizations, programmes, and
+            individuals working towards the Sustainable Development <br />
+            Goals(SDGs), we offer four key services:
+          </p>
+          <div class="container">
+            <div class="box">
+              <div class="box-label">
+                <img
+                  src="./Icons/movie_24dp_998657_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt=""
+                />
+                <p>Filmmaking</p>
+              </div>
+              <div class="box-content">
+                <div class="fullBox">
+                  <div id="left">
+                    <img
+                      src="./Icons/movie_24dp_998657_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <p>Filmmaking</p>
+                  </div>
+                  <div id="right">
+                    <p>
+                      As a factual film production company, Eyeris offers
+                      end-to-end filmmaking services across formats. From
+                      documentaries and explainers to animations and other forms
+                      of non-fiction video content, we craft compelling visual
+                      stories grounded in truth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-label">
+                <img
+                  src="./Icons/head_mounted_device_24dp_998657_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt=""
+                />
+                <p>Immersive Media</p>
+              </div>
+              <div class="box-content">
+                <div class="fullBox">
+                  <div id="left">
+                    <img
+                      src="./Icons/head_mounted_device_24dp_998657_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <p>Immerssive Media</p>
+                  </div>
+                  <div id="right">
+                    <p>
+                      While immersive filmmaking falls under our broader film
+                      work, we see it as a space with unique potentail-and a
+                      future USP for Eyeris. We are currently exploring the use
+                      of VR in wildlife and other critical development themes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-label">
+                <img src="./Icons/Workshop,Events.svg" alt="" />
+                <p>Workshops and Events</p>
+              </div>
+              <div class="box-content">
+                <div class="fullBox">
+                  <div id="right">
+                    <p>
+                      We believe in sharing what we know. Through workshops,
+                      campaigns, and community-driven events, we build
+                      capacities and create platforms that enable changemakers
+                      to amplify their work and impact.
+                    </p>
+                  </div>
+                  <div id="left">
+                    <img src="./Icons/Workshop,Events.svg" alt="" />
+                    <p>Workshops and Events</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="box-label">
+                <img
+                  src="./Icons/article_person_24dp_998657_FILL0_wght400_GRAD0_opsz24.svg"
+                  alt=""
+                />
+                <p>Journalistic Services</p>
+              </div>
+              <div class="box-content">
+                <div class="fullBox">
+                  <div id="right">
+                    <p>
+                      Having started our journey in journalism, we continue to
+                      offer a range of editorial services-including reporting,
+                      editing, interviewing, and translation-with a strong focus
+                      on the environment and development sectors.
+                    </p>
+                  </div>
+                  <div id="left">
+                    <img
+                      src="./Icons/article_person_24dp_998657_FILL0_wght400_GRAD0_opsz24.svg"
+                      alt=""
+                    />
+                    <p>Journalistic Services</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page3">
+        <div class="box1">
+          <div>
+            <h2>IN THE PRESS</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="text">
+          <p>JUNE 6, 2018 | DECCAN CHRONICLE</p>
+          <h2>In Luv-Kush land, plastic the new Ravana</h2>
+          <br /><br />
+          <p>JUNE 22, 2019 | THE NEW INDIAN EXPRESS</p>
+          <h2>Hisss story: busting serpentine myths</h2>
+          <br /><br />
+          <p>JUNE 22, 2019 | THE HINDU</p>
+          <h2>One tree at a time</h2>
+          <br /><br />
+          <p>NOVEMBER 14, 2019 | TIMES OF INDIA</p>
+          <h2>Govt school kids to launch mega sapling drive today</h2>
+        </div>
+      </div>
+      <div class="page4">
+        <div class="box1">
+          <div>
+            <div class="line"></div>
+            <h2>CLIENTS</h2>
+          </div>
+        </div>
+        <div id="logoMarquee">
+          <div class="clients-logos">
+            <!-- first set -->
+            <div class="circle-logo">
+              <img
+                src="./Clients and collaborators logos/Kalinga Foundation logo.png"
+                alt="Kalinga Foundation"
+              />
+            </div>
+            <img
+              src="./Clients and collaborators logos/KCRE_Logo.png"
+              alt="KCRE"
+            />
+            <img
+              src="./Clients and collaborators logos/CSR-vert_indigo.png"
+              alt="Cisco"
+            />
+            <img
+              src="./Clients and collaborators logos/BORDA.png"
+              alt="BORDA"
+            />
+            <img
+              src="./Clients and collaborators logos/213717ef117dae9759fd90175882e9bca87e4016.png"
+              alt="Gecko Logo"
+            />
+            <img
+              src="./Clients and collaborators logos/DellTech_Logo_Stk_Blue_Gry_rgb.png"
+              alt="Dell"
+            />
+            <img
+              src="./Clients and collaborators logos/Chaarana Labs.png"
+              alt="Chaarana Labs"
+            />
+            <img
+              src="./Clients and collaborators logos/Colour-Black Outline.png"
+              alt="Colour Outline"
+            />
+
+            <!-- duplicate set for infinite scroll -->
+            <div class="circle-logo">
+              <img
+                src="./Clients and collaborators logos/Kalinga Foundation logo.png"
+                alt="Kalinga Foundation"
+              />
+            </div>
+            <img
+              src="./Clients and collaborators logos/KCRE_Logo.png"
+              alt="KCRE"
+            />
+            <img
+              src="./Clients and collaborators logos/CSR-vert_indigo.png"
+              alt="Cisco"
+            />
+            <img
+              src="./Clients and collaborators logos/BORDA.png"
+              alt="BORDA"
+            />
+            <img
+              src="./Clients and collaborators logos/213717ef117dae9759fd90175882e9bca87e4016.png"
+              alt="Gecko Logo"
+            />
+            <img
+              src="./Clients and collaborators logos/DellTech_Logo_Stk_Blue_Gry_rgb.png"
+              alt="Dell"
+            />
+            <img
+              src="./Clients and collaborators logos/Chaarana Labs.png"
+              alt="Chaarana Labs"
+            />
+            <img
+              src="./Clients and collaborators logos/Colour-Black Outline.png"
+              alt="Colour Outline"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="page5">
+        <div class="box1">
+          <div>
+            <h2>REACH OUT</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+        <section class="contact-section">
+          <!-- Left side -->
+          <div class="contact-text">
+            <h2>HIT US UP</h2>
+            <p>
+              Whether you're a grassroots changemaker, a social organisation, or
+              even a fresher determined to build a better world, we are all
+              “eyes” to know your story.
+            </p>
+            <p>
+              We're here to turn your impact into insights.
+              <em
+                >Development Insights that inform, inspire, and ignite
+                action.</em
+              >
+            </p>
+            <a href="ContactUS.html" class="contact-btn">Contact Us ↗</a>
+          </div>
+
+          <!-- Right side (form) -->
+          <div class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="9e1d7970-be3a-49ca-b141-87e1cbaa55b8"
+              />
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="text" name="phone" placeholder="Phone" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea name="message" placeholder="Message"></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/yourkitid.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script></script>
+  </body>
+</html>

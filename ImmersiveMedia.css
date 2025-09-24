@@ -1,0 +1,742 @@
+@font-face {
+  font-family: "Bookman";
+  src: url("./FONTS/bookman-old-style/Bookman\ old\ style.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("./FONTS/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+
+#nav {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 5vw;
+  background-color: #00000067;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+}
+#nav #links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+  cursor: pointer;
+}
+
+/* Common underline effect for h3 and img */
+#nav #links h3,
+#nav #links img {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+}
+
+#nav #links h3::after,
+#nav #links img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* adjust distance for underline */
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+}
+
+#nav #links #active h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* adjust distance for underline */
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease-in-out;
+  width: 100%;
+}
+
+#nav #links h3:hover::after,
+#nav #links img:hover::after {
+  width: 100%;
+}
+
+#nav #links img {
+  height: 5.3vw;
+  width: auto;
+}
+
+.glass-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 15px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(65, 64, 64, 0.2);
+  border: 1px solid white;
+}
+
+.glass-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.glass-btn:hover {
+  /* background: rgba(255, 255, 255, 0.25); */
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.glass-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#nav2 {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 2vw;
+  height: 5vw;
+  display: none;
+
+  .hamburger {
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    z-index: 1001; /* above background */
+    position: relative;
+    margin: 10px;
+  }
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #998657;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  /* Transform to X when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  /* Panel for background + animation */
+  .menu-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000000b3;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    z-index: 1000;
+    padding-top: 50px; /* space for hamburger */
+  }
+
+  /* Show animation */
+  .menu-panel.show {
+    max-height: 500px; /* enough for all links */
+    opacity: 1;
+  }
+
+  /* Nav links inside */
+  .nav-links2 {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links2 li a {
+    text-decoration: none;
+    color: #998657;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+#page1 {
+  width: 100%;
+  height: 100vh;
+  padding: 0.1px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  #div1 {
+    width: 100%;
+    height: 20vh;
+    /* background-color: #434040; */
+    margin-top: 10vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: flex;
+
+    #left {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 220px;
+        width: 220px;
+      }
+    }
+    #right {
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      /* background-color: #998657; */
+      h1 {
+        font-weight: 300;
+        font-size: 3vw;
+      }
+      p {
+        font-size: 1.6vw;
+        margin-top: 0.7vw;
+        font-family: "DMSans";
+      }
+    }
+  }
+
+  #div2 {
+    padding-left: 8vw;
+    padding-right: 8vw;
+    font-size: 2.2vw;
+    margin-top: 3vw;
+    font-family: "DMSans";
+    text-align: justify;
+  }
+}
+
+#page2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #div3 {
+    width: 80%;
+    height: 80vh;
+    background-image: url("./Thumbnails\ -\ Our\ Work\ Page/Artboard 3.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  #div3 video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* contact  */
+
+.page5 {
+  margin-top: 3vw;
+  width: 100%;
+  height: 100vh;
+}
+.box1 {
+  padding: 6vw 6vw 4vw 6vw;
+  height: 20vh;
+  width: 100%;
+  color: #998657;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    .line {
+      height: 1px;
+      background-color: #998657;
+      width: 80%;
+    }
+  }
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 10%;
+  gap: 50px;
+}
+
+/* Left side */
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #ccc;
+  text-align: justify;
+  font-family: "DMSans";
+}
+
+.contact-text p em {
+  color: #998657; /* gold text */
+  font-style: normal;
+  font-weight: bold;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 14px 27px;
+  border-radius: 50px;
+  font-size: 1.3vw;
+  /* font-weight: bold; */
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #998657;
+  color: #000;
+}
+
+/* Right side (form) */
+.contact-form {
+  flex: 1;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #998657;
+}
+
+@media (max-width: 500px) {
+  #nav {
+    display: none;
+  }
+
+  #nav2 {
+    display: block;
+  }
+
+  #page1 {
+    width: 100%;
+    height: 50vh;
+    padding: 0.1px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    #div1 {
+      width: 100%;
+      height: 20vh;
+      /* background-color: #434040; */
+      margin-top: 10vw;
+      padding-left: 3%;
+      padding-right: 2vw;
+      display: flex;
+
+      #left {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+      #right {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        /* background-color: #998657; */
+        h1 {
+          font-weight: 300;
+          font-size: 5vw;
+        }
+        p {
+          font-size: 3vw;
+          margin-top: 0.7vw;
+        }
+      }
+    }
+    #div2 p {
+      font-size: 3.5vw;
+      text-align: center;
+    }
+  }
+
+  #page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vw;
+    #div3 {
+      width: 90%;
+      height: 23vh;
+      background-image: url("./Thumbnails\ -\ Our\ Work\ Page/Artboard 3.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    #div3 video {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .page5 {
+    margin-top: 10vw;
+    width: 100%;
+  }
+  .box1 {
+    /* padding: 6vw 6vw 4vw 6vw; */
+    /* height: 0vh; */
+    width: 100%;
+    color: #998657;
+    font-size: 3vw;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2vw;
+      .line {
+        height: 2px;
+        background-color: #998657;
+        width: 65%;
+      }
+    }
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 7%;
+    gap: 50px;
+    margin-top: -25vw;
+  }
+
+  .contact-form {
+    button {
+      background-color: #998657;
+    }
+  }
+
+  /* Left side */
+  .contact-text h2 {
+    font-size: 10vw;
+  }
+
+  .contact-text p {
+    text-align: left;
+    font-size: 5vw;
+  }
+
+  .contact-btn {
+    /* display: none; */
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 8px 10px;
+    border-radius: 50px;
+    font-size: 4vw;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+
+  .contact-form {
+    margin-top: -5vw;
+    padding: 2vw;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 1024px) {
+  #page1 {
+    width: 100%;
+    height: 70vh;
+    padding: 0.1px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    #div1 {
+      width: 100%;
+      height: 20vh;
+      /* background-color: #434040; */
+      margin-top: 10vw;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      display: flex;
+
+      #left {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 220px;
+          width: 220px;
+        }
+      }
+      #right {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 2vw;
+        /* background-color: #998657; */
+        h1 {
+          font-weight: 300;
+          font-size: 4vw;
+        }
+        p {
+          font-size: 2vw;
+          margin-top: 0.7vw;
+          font-family: "DMSans";
+        }
+      }
+    }
+
+    #div2 {
+      padding-left: 8vw;
+      padding-right: 8vw;
+      font-size: 3.1vw;
+      margin-top: 3vw;
+      font-family: "DMSans";
+      text-align: justify;
+    }
+  }
+
+  #page2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #div3 {
+      margin-top: -5vw;
+      width: 90%;
+      height: 35vh;
+      background-image: url("./Thumbnails\ -\ Our\ Work\ Page/Artboard 3.jpg");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    #div3 video {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .page5 {
+    margin-top: 8vw;
+    width: 100%;
+    height: 80vh;
+  }
+
+  .contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 10%;
+    gap: 50px;
+    margin-top: -15vw;
+  }
+
+  /* Left side */
+  .contact-text {
+    flex: 1;
+  }
+
+  .contact-text h2 {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .contact-text p {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #ccc;
+    text-align: justify;
+    font-family: "DMSans";
+  }
+
+  .contact-text p em {
+    color: #998657; /* gold text */
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 14px 27px;
+    border-radius: 50px;
+    font-size: 1.3vw;
+    /* font-weight: bold; */
+    text-decoration: none;
+    transition: background 0.3s ease;
+    display: none;
+  }
+
+  .contact-btn:hover {
+    background: #998657;
+    color: #000;
+  }
+
+  /* Right side (form) */
+  .contact-form {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .contact-form textarea {
+    resize: none;
+    height: 120px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #998657;
+    color: #000000d4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background: #998657;
+  }
+}
