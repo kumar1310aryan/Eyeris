@@ -67,7 +67,7 @@ function loader() {
       } else {
         gsap.to(overlayImage, {
           duration: 1.5,
-          y: "-33.5%",
+          y: "-35.5%",
           x: "-4.5%",
           scale: 0.1,
           opacity: 0.8,
