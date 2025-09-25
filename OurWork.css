@@ -502,6 +502,12 @@ body {
   }
 }
 
+#page2{
+  .page2-content{
+    height: 12vw;
+  }
+}
+
 .page5 {
   margin-top: 3vw;
   width: 100%;

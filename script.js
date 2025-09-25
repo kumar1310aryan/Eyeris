@@ -48,7 +48,7 @@ function loader() {
       if (window.innerWidth < 500) {
         gsap.to(overlayImage, {
           duration: 1.8,
-          y: "-35.5%",
+          y: "-37.5%",
           x: "15.9%",
           scale: 0.08,
           opacity: 0,

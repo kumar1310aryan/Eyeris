@@ -39,8 +39,8 @@ body {
 
 #overlayImage {
   position: absolute;
-  top: 48%; /* center vertically */
-  left: 51.5%; /* center horizontally */
+  top: 48.3%; /* center vertically */
+  left: 51.55%; /* center horizontally */
   transform: translate(-50%, -50%); /* exact centering */
   width: 915px; /* adjust size */
   opacity: 0;
@@ -789,9 +789,14 @@ body {
       text-align: center;
       font-size: 3vw;
       color: #998657;
-      font-weight: 700;
+      font-weight: 500;
       font-family: "Bookman";
-      font-style: italic;
+      /* font-style: italic; */
+      #normalText{
+        font-family: none;
+        font-style: italic;
+        font-size: 3.2vw;
+      }
     }
   }
   .right {
@@ -806,6 +811,10 @@ body {
     h2 {
       text-align: center;
       margin-top: 1vw;
+      font-family: "DMSans";
+      color: #fff;
+      text-decoration: none;
+      
     }
   }
 }
