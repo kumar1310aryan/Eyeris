@@ -67,9 +67,9 @@ function loader() {
       } else {
         gsap.to(overlayImage, {
           duration: 1.5,
-          y: "-35.5%",
+          y: "-35%",
           x: "-4.5%",
-          scale: 0.1,
+          scale: 0.17,
           opacity: 0.8,
           ease: "power2.inOut",
           onComplete: () => {
@@ -234,11 +234,17 @@ document.querySelector(".play1").onclick = function () {
 };
 
 document.querySelector(".play2").onclick = function () {
-  window.open("https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be", "_blank");
+  window.open(
+    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+    "_blank"
+  );
 };
 
 document.querySelector(".play3").onclick = function () {
-  window.open("https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be", "_blank");
+  window.open(
+    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+    "_blank"
+  );
 };
 
 document.querySelector(".play4").onclick = function () {
@@ -278,7 +284,10 @@ document.querySelector(".play9").onclick = function () {
 };
 
 document.querySelector(".play10").onclick = function () {
-  window.open("https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be", "_blank");
+  window.open(
+    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+    "_blank"
+  );
 };
 
 document.querySelector(".play11").onclick = function () {

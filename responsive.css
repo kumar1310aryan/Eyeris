@@ -213,6 +213,237 @@
     transform: translate(-50%, 0);
   }
 
+  #overlayText1 {
+    z-index: 100000;
+    position: absolute;
+    top: 60%;
+    left: 2%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+  #overlayText2 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 102%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText3 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 202%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText4 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 302%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText5 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 402%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText6 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 70%;
+    left: 502%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText7 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 65%;
+    left: 602%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText8 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 702%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText9 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 802%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText10 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 902%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText11 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 1002%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText12 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 1102%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
+
+  #overlayText13 {
+    z-index: 100000;
+    position: absolute;
+    width: 100vw;
+    top: 60%;
+    left: 1202%;
+    h1 {
+      font-family: "Bookman";
+      font-size: 8vw;
+      font-weight: 500;
+    }
+    p {
+      font-family: "DMSans";
+      font-size: 5vw;
+      font-weight: 200;
+    }
+  }
   /* Navigation buttons */
   .prev,
   .next {

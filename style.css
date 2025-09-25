@@ -524,6 +524,7 @@ body {
   justify-content: center;
   gap: 4vw;
   cursor: pointer;
+  margin-top: -2.3vw;
   /* z-index: 100000000000000; */
 }
 
@@ -553,7 +554,7 @@ body {
 }
 
 #nav #links img {
-  height: 5.3vw;
+  height: 10vw;
   width: auto;
 }
 
@@ -814,7 +815,7 @@ body {
       font-family: "DMSans";
       color: #fff;
       text-decoration: none;
-      
+
     }
   }
 }
@@ -1176,7 +1177,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-350%);
   }
 }
 
