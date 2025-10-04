@@ -8,4 +8,10 @@
   z-index: 9999;
   transform: translateY(100%);
   pointer-events: none;
+  display: none;
+}
+
+body {
+  opacity: 0; /* hide body initially */
+  overflow-x: hidden; /* optional: prevent horizontal scroll during animation */
 }
