@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eyeris-Workshops and Events</title>
-     <link rel="shortcut icon" href="Croc Eye sqare.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="Croc Eye sqare.jpg" type="image/x-icon" />
 
-     <!-- locomotive css  -->
+    <!-- locomotive css  -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
@@ -15,8 +15,8 @@
     <!-- shery css  -->
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
 
-
     <link rel="stylesheet" href="WorkShopsAndEvents.css" />
+    <link rel="stylesheet" href="transition.css" />
   </head>
   <body>
     <div id="nav">
@@ -65,17 +65,17 @@
       </div>
 
       <img
-          src="White 2024 Eyeris media logo.png"
-          alt=""
-          style="
-            width: 70px;
-            position: relative;
-            top: 0%;
-            left: 90%;
-            transform: translate(-50%, -75%);
-            z-index: 100000;
-          "
-          onclick="window.location.href='index.html'"
+        src="White 2024 Eyeris media logo.png"
+        alt=""
+        style="
+          width: 70px;
+          position: relative;
+          top: 0%;
+          left: 90%;
+          transform: translate(-50%, -75%);
+          z-index: 100000;
+        "
+        onclick="window.location.href='index.html'"
       />
 
       <div class="menu-panel" id="menuPanel">
@@ -176,7 +176,8 @@
         </section>
       </div>
     </div>
-     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <div id="transition"></div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -283,5 +284,6 @@
       }
       locomotiveAnimation();
     </script>
+    <script src="transition.js"></script>
   </body>
 </html>
