@@ -127,10 +127,22 @@ body {
 .play1 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 84%;
   left: 90%;
   cursor: pointer;
   opacity: 0;
+}
+
+#watchHere1 {
+  z-index: 100000;
+  position: absolute;
+  top: 95%;
+  left: 90%;
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
 }
 
 #overlayText1 {
@@ -368,87 +380,278 @@ body {
 .play2 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 190%;
   cursor: pointer;
+}
+#watchHere2 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 185.5%;
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play3 {
   z-index: 10000000000000000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 290%;
   cursor: pointer;
+}
+#watchHere3 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 285.5%;
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play4 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 390%;
   cursor: pointer;
+}
+#watchHere4 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 385.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play5 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 490%;
+}
+#watchHere5 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 485.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play6 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 590%;
+}
+#watchHere6 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 585.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 .play7 {
   z-index: 100000;
   position: absolute;
-  top: 88%;
+  top: 82%;
   left: 690%;
+}
+#watchHere7 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 685.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play8 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 790%;
+}
+#watchHere8 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 785.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play9 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 890%;
+}
+#watchHere9 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 885.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play10 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 990%;
 }
+#watchHere10 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 985.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 
 .play11 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 1090%;
+}
+#watchHere11 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 1085.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play12 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 1190%;
+}
+#watchHere12 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 1185.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .play13 {
   z-index: 100000;
   position: absolute;
-  top: 85%;
+  top: 82%;
   left: 1290%;
+}
+#watchHere13 {
+  z-index: 100000;
+  position: absolute;
+  top: 93%;
+  left: 1285.5%;
+  /* cursor: poin
+  /* cursor: pointer; */
+  opacity: 1;
+  font-family: "SDSans";
+  color: #998657;
+  font-weight: 600;
+  width: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 /* Navigation buttons */
@@ -793,7 +996,7 @@ body {
       font-weight: 500;
       font-family: "Bookman";
       /* font-style: italic; */
-      #normalText{
+      #normalText {
         font-family: none;
         font-style: italic;
         font-size: 3.2vw;
@@ -815,7 +1018,6 @@ body {
       font-family: "DMSans";
       color: #fff;
       text-decoration: none;
-
     }
   }
 }
