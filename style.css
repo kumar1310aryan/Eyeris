@@ -584,7 +584,6 @@ body {
   justify-content: flex-end;
 }
 
-
 .play11 {
   z-index: 100000;
   position: absolute;
@@ -727,7 +726,6 @@ body {
   justify-content: center;
   gap: 4vw;
   cursor: pointer;
-  margin-top: -2.3vw;
   /* z-index: 100000000000000; */
 }
 
@@ -757,7 +755,7 @@ body {
 }
 
 #nav #links img {
-  height: 10vw;
+  height: 5.3vw;
   width: auto;
 }
 
@@ -796,6 +794,46 @@ body {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
+#links {
+  align-items: center;
+  height: 5vw;
+  display: flex;
+  position: relative;
+
+  /* gap: 5vw; */
+  #left {
+    display: flex;
+    width: 40%;
+    gap: 2.5vw;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: pink; */
+  }
+  #center {
+    width: 0%;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -134%;
+    /* top: 10%; */
+    left: 21.5%;
+    img {
+      /* transform: translate(-20%); */
+      width: 60vw;
+      /* width: 200px;  */
+      height: auto;
+      /* transform: translate(-10%); */
+    }
+  }
+  #right {
+    display: flex;
+    width: 40%;
+    gap: 2.5vw;
+    align-items: center;
+    /* background-color: pink; */
+  }
+}
 #nav2 {
   position: fixed;
   z-index: 2;

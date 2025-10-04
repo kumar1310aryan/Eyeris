@@ -1,11 +1,12 @@
 function loader() {
   const video = document.querySelector("#loader video");
-  const overlayImage = document.getElementById("overlayImage");
+  const eyeris = document.querySelector("#center img");
   const nav = document.querySelector("#nav");
   const main = document.querySelector(".main");
   const loader = document.querySelector("#loader");
   const playVideoBtn = document.querySelector(".play1");
   const playText = document.querySelector("#loader p");
+  const center = document.querySelector("#links #center");
 
   // ✅ Ensure main and nav start hidden
   nav.style.display = "none";
@@ -20,8 +21,9 @@ function loader() {
     });
 
     // Make overlay visible
-    overlayImage.style.opacity = 1;
+    // overlayImage.style.opacity = 1;
     playText.style.opacity = 1;
+    nav.style.display = "block";
 
     const startOverlayAnimation = () => {
       // Remove listeners so it only runs once
@@ -48,7 +50,7 @@ function loader() {
       if (window.innerWidth < 500) {
         gsap.to(overlayImage, {
           duration: 1.8,
-          y: "-37.5%",
+          y: "-35.5%",
           x: "15.9%",
           scale: 0.08,
           opacity: 0,
@@ -65,23 +67,26 @@ function loader() {
           },
         });
       } else {
-        gsap.to(overlayImage, {
+        gsap.to(center, {
           duration: 1.5,
-          y: "-35%",
-          x: "-4.5%",
-          scale: 0.17,
-          opacity: 0.8,
-          ease: "power2.inOut",
-          onComplete: () => {
-            gsap.to(overlayImage, {
-              duration: 1,
-              opacity: 0,
-              onComplete: () => {
-                overlayImage.style.display = "none";
-                showContent(); // ✅ show nav & main here
-              },
-            });
-          },
+          // width: "20%",
+          // width: "7%",
+          // top: "-10%",
+          ease: "power3.out",
+        });
+
+        gsap.to(eyeris, {
+          duration: 1.5,
+          width: "12.5vw",
+          x: "22vw",
+          y: "3vw",
+          ease: "power3.out",
+        });
+        gsap.to("#links", {
+          duration: 1.5,
+          gap: "15vw", // or whatever spacing feels good
+          ease: "power3.out",
+          onComplete: showContent,
         });
       }
 
