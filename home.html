@@ -14,17 +14,20 @@
     />
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="transition.css" />
   </head>
   <body>
     <div id="nav">
       <div id="links">
-        <h3 onclick="window.location.href='WhoWeAre.html'">Who We Are</h3>
+        <div>
+          <h3 onclick="window.location.href='WhoWeAre.html'">Who We Are</h3>
+        </div>
         <h3 onclick="window.location.href='WhatWeDo.html'">What We Do</h3>
-        <div id="active">
+        <div>
           <h3 onclick="window.location.href='OurWork.html'">Our Work</h3>
         </div>
         <img
-          onclick="window.location.href='index.html'"
+          onclick="window.location.href='home.html'"
           src="White 2024 Eyeris media logo.png"
           alt=""
         />
@@ -62,7 +65,7 @@
           transform: translate(-50%, -75%);
           z-index: 100000;
         "
-        onclick="window.location.href='index.html'"
+        onclick="window.location.href='home.html'"
       />
 
       <div class="menu-panel" id="menuPanel">
@@ -703,6 +706,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="home.js"></script>
-    <script></script>
+    <script src="transition.js"></script>
   </body>
 </html>
