@@ -1,119 +1,60 @@
+function videoSlides() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelector(".slides");
+    const videos = slides.querySelectorAll("video");
+    const totalSlides = videos.length;
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
 
+    let currentIndex = 0;
+    const intervalTime = 10000; // 10 seconds
+    let autoSlide;
 
-function playVideo() {
-  const slides = document.querySelector(".slides");
-  const videos = document.querySelectorAll(".slides video");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  const dotsContainer = document.querySelector(".dots");
-  const playText2 = document.querySelector("#loader p");
+    // Function to update slide position
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-  playText2.style.opacity = 0;
+    // Function to go to next slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
 
-  let currentIndex = 0;
-  const totalVideos = videos.length;
+    // Function to go to previous slide
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
 
-  // Create dots
-  for (let i = 0; i < totalVideos; i++) {
-    const dot = document.createElement("span");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  }
-  const dots = document.querySelectorAll(".dots span");
-
-  function updateSlider() {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
+    // Event listeners for navigation buttons
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      resetAutoSlide();
     });
-  }
 
-  function goToSlide(index) {
-    currentIndex = index;
-    updateSlider();
-  }
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      resetAutoSlide();
+    });
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
-    updateSlider();
+    // Auto slide function
+    function startAutoSlide() {
+      autoSlide = setInterval(nextSlide, intervalTime);
+    }
+
+    // Reset timer when user manually clicks next/prev
+    function resetAutoSlide() {
+      clearInterval(autoSlide);
+      startAutoSlide();
+    }
+
+    // Initialize
+    updateSlide();
+    startAutoSlide();
   });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % totalVideos;
-    updateSlider();
-  });
-
-  // Auto-slide every 10 seconds (10000ms)
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalVideos;
-    updateSlider();
-  }, 10000);
 }
-if (typeof playVideo === "function") {
-  playVideo();
-}
-
-function updateNavDisplay() {
-  if (window.innerWidth < 500) {
-    nav.style.display = "none";
-    nav2.style.display = "block";
-  } else {
-    nav.style.display = "block";
-  }
-}
-
-window.addEventListener("resize", updateNavDisplay);
-
-const boxes = document.querySelectorAll(".box");
-const container = document.querySelector(".container");
-
-function resetBoxes() {
-  boxes.forEach((b) => b.classList.remove("active"));
-}
-
-boxes.forEach((box) => {
-  box.addEventListener("mouseenter", () => {
-    resetBoxes();
-    container.classList.add("collapsed");
-    box.classList.add("active");
-  });
-
-  box.addEventListener("click", () => {
-    resetBoxes();
-    container.classList.add("collapsed");
-    box.classList.add("active");
-  });
-});
-
-container.addEventListener("mouseleave", () => {
-  resetBoxes();
-  container.classList.remove("collapsed");
-});
-
-function SDGChange() {
-  const images = [
-    "./SDGs - gif/E_GIF_03.gif",
-    "./SDGs - gif/E_GIF_04.gif",
-    "./SDGs - gif/E_GIF_06.gif",
-    "./SDGs - gif/E_GIF_07.gif",
-    "./SDGs - gif/E_GIF_11.gif",
-    "./SDGs - gif/E_GIF_13.gif",
-    "./SDGs - gif/E_GIF_14.gif",
-    "./SDGs - gif/E_GIF_15.gif",
-    "./SDGs - gif/E_GIF_17.gif",
-  ];
-
-  let index = 0;
-  const imgElement = document.getElementById("sdgImg");
-
-  setInterval(() => {
-    index = (index + 1) % images.length; // loop back to first after last
-    imgElement.src = images[index];
-  }, 2000); // change every 2 seconds
-}
-
-SDGChange();
+videoSlides();
 
 function nav2() {
   const hamburger = document.getElementById("hamburger");
@@ -125,6 +66,29 @@ function nav2() {
   });
 }
 nav2();
+
+function BoxExpand() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll(".container .box");
+    const container = document.querySelector(".container");
+
+    boxes.forEach((box) => {
+      // When hovering on a box
+      box.addEventListener("mouseenter", () => {
+        boxes.forEach((b) => b.classList.remove("active"));
+        box.classList.add("active");
+        container.classList.add("collapsed"); // hide others
+      });
+    });
+
+    // When leaving the whole container, reset layout
+    container.addEventListener("mouseleave", () => {
+      boxes.forEach((b) => b.classList.remove("active"));
+      container.classList.remove("collapsed");
+    });
+  });
+}
+BoxExpand();
 
 document.querySelector(".play1").onclick = function () {
   window.open(
