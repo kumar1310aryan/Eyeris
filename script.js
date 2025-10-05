@@ -312,3 +312,29 @@ document.querySelector(".play13").onclick = function () {
     "_blank"
   );
 };
+
+// Map of element IDs to YouTube links
+const videoLinks = {
+  watchHere1: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+  watchHere2: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+  watchHere3: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+  watchHere4: "https://www.youtube.com/watch?si=I-sbuAdia2vzgVrr&v=yLoqJyNBb04&feature=youtu.be",
+  watchHere5: "https://www.youtube.com/watch?v=RH1QBiSNIAM",
+  watchHere6: "https://www.youtube.com/watch?si=UXZQ41AbGwlHy1cq&v=77RvrMtVU-o&feature=youtu.be",
+  watchHere7: "https://www.youtube.com/watch?v=XcA3aFxOsMY",
+  watchHere8: "https://www.youtube.com/watch?si=dSDM14dTN5F1rPKL&v=CroK2JqPx9o&feature=youtu.be",
+  watchHere9: "https://www.youtube.com/watch?si=ocXHS0G6kd7YyMtU&v=dKDGqS24jxk&feature=youtu.be",
+  watchHere10: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
+  watchHere11: "https://www.youtube.com/watch?v=3XypGEOM_lw",
+  watchHere12: "https://www.youtube.com/watch?si=GgYlTETp0-PJsyl9&v=2dFWgKBWrbk&feature=youtu.be",
+  watchHere13: "https://www.youtube.com/watch?si=CyJAu_IoGsxzc64A&v=dqRpdkT_17w&feature=youtu.be",
+};
+
+// Loop through each entry and assign click + hover effects
+for (const [id, url] of Object.entries(videoLinks)) {
+  const el = document.querySelector(`#${id}`);
+  if (el) {
+    el.style.cursor = "pointer";
+    el.onclick = () => window.open(url, "_blank");
+  }
+}

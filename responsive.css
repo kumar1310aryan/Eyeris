@@ -444,6 +444,22 @@
       font-weight: 200;
     }
   }
+
+  #watchHere1,
+  #watchHere2,
+  #watchHere3,
+  #watchHere4,
+  #watchHere5,
+  #watchHere6,
+  #watchHere7,
+  #watchHere8,
+  #watchHere9,
+  #watchHere10,
+  #watchHere11,
+  #watchHere12,
+  #watchHere13 {
+    display: none;
+  }
   /* Navigation buttons */
   .prev,
   .next {
