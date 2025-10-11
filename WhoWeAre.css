@@ -402,6 +402,8 @@ body {
     object-fit: cover;
     display: block;
     scale: 1.1;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
   }
 
   .card .info {
@@ -450,6 +452,10 @@ body {
   .card:hover .social-icons a {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .card:hover img {
+    filter: grayscale(0%);
   }
 
   .social-icons a:nth-child(1) {
@@ -1395,12 +1401,12 @@ body {
         object-fit: cover;
         display: block;
       }
-      p{
+      p {
         font-size: 3vw;
       }
     }
-    .quote{
-      h1{
+    .quote {
+      h1 {
         font-size: 5.5vw;
         margin-top: 17vw;
       }

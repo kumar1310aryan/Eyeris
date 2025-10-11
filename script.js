@@ -4,8 +4,8 @@ function loader() {
   const nav = document.querySelector("#nav");
   const main = document.querySelector(".main");
   const loader = document.querySelector("#loader");
-  const playVideoBtn = document.querySelector(".play1");
-  const playText = document.querySelector("#loader p");
+  // const playVideoBtn = document.querySelector(".play1");
+  // const playText = document.querySelector("#loader p");
   const center = document.querySelector("#links #center");
 
   // ✅ Ensure main and nav start hidden
@@ -15,14 +15,15 @@ function loader() {
   video.addEventListener("ended", () => {
     // Hide the video
     video.style.display = "none";
-    gsap.to(playVideoBtn, {
-      delay: 2,
-      opacity: 1,
-    });
+    eyeris.style.opacity = 1;
+    // gsap.to(playVideoBtn, {
+    //   delay: 2,
+    //   opacity: 1,
+    // });
 
     // Make overlay visible
     // overlayImage.style.opacity = 1;
-    playText.style.opacity = 1;
+    // playText.style.opacity = 1;
     nav.style.display = "block";
 
     const startOverlayAnimation = () => {
@@ -32,8 +33,8 @@ function loader() {
       document.removeEventListener("touchstart", startOverlayAnimation);
 
       // ✅ Call playVideo() immediately on user input
-      if (typeof playVideo === "function") {
-        playVideo();
+      if (typeof firstVideo === "function") {
+        firstVideo();
       }
 
       const showContent = () => {
@@ -42,7 +43,7 @@ function loader() {
         main.style.display = "block";
 
         gsap.fromTo(main, { opacity: 0 }, { duration: 1, opacity: 1 });
-        gsap.fromTo(nav, { opacity: 0 }, { duration: 1, opacity: 1 });
+        gsap.fromTo(nav, { opacity: 1 }, { duration: 1, opacity: 1 });
 
         updateNavDisplay();
       };
@@ -91,7 +92,7 @@ function loader() {
       }
 
       gsap.to(loader, {
-        delay: 6,
+        delay: 5,
         zIndex: -5,
       });
     };
@@ -105,57 +106,6 @@ function loader() {
     document.addEventListener("click", startOverlayAnimation);
     document.addEventListener("touchstart", startOverlayAnimation);
   });
-}
-
-function playVideo() {
-  const slides = document.querySelector(".slides");
-  const videos = document.querySelectorAll(".slides video");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  const dotsContainer = document.querySelector(".dots");
-  const playText2 = document.querySelector("#loader p");
-
-  playText2.style.opacity = 0;
-
-  let currentIndex = 0;
-  const totalVideos = videos.length;
-
-  // Create dots
-  for (let i = 0; i < totalVideos; i++) {
-    const dot = document.createElement("span");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => goToSlide(i));
-    dotsContainer.appendChild(dot);
-  }
-  const dots = document.querySelectorAll(".dots span");
-
-  function updateSlider() {
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentIndex);
-    });
-  }
-
-  function goToSlide(index) {
-    currentIndex = index;
-    updateSlider();
-  }
-
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + totalVideos) % totalVideos;
-    updateSlider();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % totalVideos;
-    updateSlider();
-  });
-
-  // Auto-slide every 10 seconds (10000ms)
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalVideos;
-    updateSlider();
-  }, 10000);
 }
 
 function updateNavDisplay() {
@@ -231,110 +181,122 @@ function nav2() {
 }
 nav2();
 
-document.querySelector(".play1").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-    "_blank"
-  );
-};
+function firstVideo() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const videoElement = document.getElementById("mainVideo");
+    const overlayTitle = document.querySelector("#overlayText h1");
+    const overlayDesc = document.querySelector("#overlayText p");
+    const watchHere = document.getElementById("watchHere");
 
-document.querySelector(".play2").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-    "_blank"
-  );
-};
+    // Video data
+    const videos = [
+      {
+        src: "LivingWithCrocs.mp4",
+        title: "Living with Crocs",
+        desc: "A tale of conversation...",
+        link: "https://www.youtube.com/watch?v=kc32ZeDrE_o",
+      },
+      {
+        src: "BeyondOne.mp4",
+        title: "Beyond One",
+        desc: "The reign of the four kings...",
+        link: "https://www.youtube.com/watch?v=kc32ZeDrE_o",
+      },
+      {
+        src: "ImmrsoveFangs.mp4",
+        title: "Immerssive Fangs",
+        desc: "A king cobra rescue in 360° VR...",
+        link: "https://www.youtube.com/watch?v=kc32ZeDrE_o",
+      },
+      {
+        src: "CleenSweep.mp4",
+        title: "Clean Sweep",
+        desc: "Dignifying sanitation work...",
+        link: "https://www.youtube.com/watch?v=yLoqJyNBb04",
+      },
+      {
+        src: "Defanged.mp4",
+        title: "Defanged",
+        desc: "Taking the bite off snake myths...",
+        link: "https://www.youtube.com/watch?v=RH1QBiSNIAM",
+      },
+      {
+        src: "dellSolar.mp4",
+        title: "Solar Community Hub",
+        desc: "Bridging the digital divide in public schools...",
+        link: "https://www.youtube.com/watch?v=77RvrMtVU-o",
+      },
+      {
+        src: "KCRE.mp4",
+        title: "KCRE",
+        desc: "Realising a dream to conserve...",
+        link: "https://www.youtube.com/watch?v=XcA3aFxOsMY",
+      },
+      {
+        src: "ABCD.mp4",
+        title: "ABCD",
+        desc: "Conservation begins with the basics...",
+        link: "https://www.youtube.com/watch?v=CroK2JqPx9o",
+      },
+      {
+        src: "MERM.mp4",
+        title: "MERM",
+        desc: "A developmental insight into public health...",
+        link: "https://www.youtube.com/watch?v=dKDGqS24jxk",
+      },
+      {
+        src: "MYTRee.mp4",
+        title: "My Tree",
+        desc: "An afforestation programme by public schools...",
+        link: "https://www.youtube.com/watch?v=kc32ZeDrE_o",
+      },
+      {
+        src: "PublicEducation.mp4",
+        title: "Redefining Public Education",
+        desc: "Walkthrough of a model government school...",
+        link: "https://www.youtube.com/watch?v=3XypGEOM_lw",
+      },
+      {
+        src: "Recclaimin.mp4",
+        title: "Reclaiming Legacy",
+        desc: "A battle against waste in the Himalayan foothills...",
+        link: "https://www.youtube.com/watch?v=2dFWgKBWrbk",
+      },
+      {
+        src: "RoleModel.mp4",
+        title: "Role mo'Dell's",
+        desc: "Today's youth, tomorrow's green innovators...",
+        link: "https://www.youtube.com/watch?v=dqRpdkT_17w",
+      },
+    ];
 
-document.querySelector(".play3").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-    "_blank"
-  );
-};
+    let order = shuffle([...Array(videos.length).keys()]);
+    let currentIndex = 0;
+    const playDuration = 10000; // 10 seconds per video
 
-document.querySelector(".play4").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=I-sbuAdia2vzgVrr&v=yLoqJyNBb04&feature=youtu.be",
-    "_blank"
-  );
-};
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
 
-document.querySelector(".play5").onclick = function () {
-  window.open("https://www.youtube.com/watch?v=RH1QBiSNIAM", "_blank");
-};
+    function playVideo(index) {
+      const v = videos[order[index]];
+      videoElement.src = v.src;
+      overlayTitle.textContent = v.title;
+      overlayDesc.textContent = v.desc;
+      watchHere.onclick = () => window.open(v.link, "_blank");
+    }
 
-document.querySelector(".play6").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=UXZQ41AbGwlHy1cq&v=77RvrMtVU-o&feature=youtu.be",
-    "_blank"
-  );
-};
+    function nextVideo() {
+      currentIndex++;
+      if (currentIndex >= videos.length) {
+        order = shuffle([...Array(videos.length).keys()]);
+        currentIndex = 0;
+      }
+      playVideo(currentIndex);
+    }
 
-document.querySelector(".play7").onclick = function () {
-  window.open("https://www.youtube.com/watch?v=XcA3aFxOsMY", "_blank");
-};
-
-document.querySelector(".play8").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=dSDM14dTN5F1rPKL&v=CroK2JqPx9o&feature=youtu.be",
-    "_blank"
-  );
-};
-
-document.querySelector(".play9").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=ocXHS0G6kd7YyMtU&v=dKDGqS24jxk&feature=youtu.be",
-    "_blank"
-  );
-};
-
-document.querySelector(".play10").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-    "_blank"
-  );
-};
-
-document.querySelector(".play11").onclick = function () {
-  window.open("https://www.youtube.com/watch?v=3XypGEOM_lw", "_blank");
-};
-
-document.querySelector(".play12").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=GgYlTETp0-PJsyl9&v=2dFWgKBWrbk&feature=youtu.be",
-    "_blank"
-  );
-};
-
-document.querySelector(".play13").onclick = function () {
-  window.open(
-    "https://www.youtube.com/watch?si=CyJAu_IoGsxzc64A&v=dqRpdkT_17w&feature=youtu.be",
-    "_blank"
-  );
-};
-
-// Map of element IDs to YouTube links
-const videoLinks = {
-  watchHere1: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-  watchHere2: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-  watchHere3: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-  watchHere4: "https://www.youtube.com/watch?si=I-sbuAdia2vzgVrr&v=yLoqJyNBb04&feature=youtu.be",
-  watchHere5: "https://www.youtube.com/watch?v=RH1QBiSNIAM",
-  watchHere6: "https://www.youtube.com/watch?si=UXZQ41AbGwlHy1cq&v=77RvrMtVU-o&feature=youtu.be",
-  watchHere7: "https://www.youtube.com/watch?v=XcA3aFxOsMY",
-  watchHere8: "https://www.youtube.com/watch?si=dSDM14dTN5F1rPKL&v=CroK2JqPx9o&feature=youtu.be",
-  watchHere9: "https://www.youtube.com/watch?si=ocXHS0G6kd7YyMtU&v=dKDGqS24jxk&feature=youtu.be",
-  watchHere10: "https://www.youtube.com/watch?si=TktEOuflxKCGFU1_&v=kc32ZeDrE_o&feature=youtu.be",
-  watchHere11: "https://www.youtube.com/watch?v=3XypGEOM_lw",
-  watchHere12: "https://www.youtube.com/watch?si=GgYlTETp0-PJsyl9&v=2dFWgKBWrbk&feature=youtu.be",
-  watchHere13: "https://www.youtube.com/watch?si=CyJAu_IoGsxzc64A&v=dqRpdkT_17w&feature=youtu.be",
-};
-
-// Loop through each entry and assign click + hover effects
-for (const [id, url] of Object.entries(videoLinks)) {
-  const el = document.querySelector(`#${id}`);
-  if (el) {
-    el.style.cursor = "pointer";
-    el.onclick = () => window.open(url, "_blank");
-  }
+    playVideo(currentIndex);
+    setInterval(nextVideo, playDuration);
+  });
 }
+firstVideo();
