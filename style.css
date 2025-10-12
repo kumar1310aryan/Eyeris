@@ -194,6 +194,10 @@ video {
   stroke: #998657;
 }
 
+#progressCircle {
+  transition: stroke-dashoffset 0.2s linear;
+}
+
 #nav {
   position: fixed;
   z-index: 2;

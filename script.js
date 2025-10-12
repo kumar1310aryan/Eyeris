@@ -186,6 +186,7 @@ function firstVideo() {
     const overlayTitle = document.querySelector("#overlayText h1");
     const overlayDesc = document.querySelector("#overlayText p");
     const watchHere = document.getElementById("watchHere");
+    const progressCircle = document.getElementById("progressCircle");
 
     // Video data
     const videos = [
@@ -269,13 +270,20 @@ function firstVideo() {
       },
     ];
 
-    let order = shuffle([...Array(videos.length).keys()]);
-    let currentIndex = 0;
-    const playDuration = 10000; // 10 seconds per video
-
+    // Shuffle helper
     function shuffle(array) {
       return array.sort(() => Math.random() - 0.5);
     }
+
+    let order = shuffle([...Array(videos.length).keys()]);
+    let currentIndex = 0;
+    const playDuration = 10000; // 10 seconds per video
+    const radius = 46;
+    const circumference = 2 * Math.PI * radius;
+    progressCircle.style.strokeDasharray = circumference;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    let animationFrame = null;
 
     function playVideo(index) {
       const v = videos[order[index]];
@@ -283,6 +291,23 @@ function firstVideo() {
       overlayTitle.textContent = v.title;
       overlayDesc.textContent = v.desc;
       watchHere.onclick = () => window.open(v.link, "_blank");
+
+      // Reset progress
+      progressCircle.style.strokeDashoffset = circumference;
+
+      // Animate fill clockwise
+      let start = null;
+      cancelAnimationFrame(animationFrame);
+      function animateProgress(timestamp) {
+        if (!start) start = timestamp;
+        const elapsed = timestamp - start;
+        const progress = Math.min(elapsed / playDuration, 1);
+        progressCircle.style.strokeDashoffset = circumference * (1 - progress);
+        if (progress < 1) {
+          animationFrame = requestAnimationFrame(animateProgress);
+        }
+      }
+      animationFrame = requestAnimationFrame(animateProgress);
     }
 
     function nextVideo() {

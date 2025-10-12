@@ -169,6 +169,11 @@ video {
   stroke: #998657;
 }
 
+#progressCircle {
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+
 /* Common underline effect for h3 and img */
 #nav #links h3,
 #nav #links img {
