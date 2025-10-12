@@ -860,6 +860,12 @@ video {
       color: #998657;
       text-decoration: underline;
       font-family: "DMSans";
+      transition: text-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    h2:hover {
+      text-shadow: 0 0 1px #998657, 0 0 2px #635737;
+      
     }
   }
 }
@@ -1008,4 +1014,13 @@ video {
     border-image: linear-gradient(to right, #fff, #ccc) 1;
     padding: 16px;
   }
+}
+
+.footer{
+  width: 100%;
+  height: 10vh;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

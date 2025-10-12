@@ -724,6 +724,19 @@ body {
   background: #998657;
 }
 
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  /* background-color: gray; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: "DMSans";
+    color: gray;
+  }
+}
 @media (max-width: 500px) {
   #nav {
     display: none;

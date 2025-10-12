@@ -63,6 +63,28 @@ body {
   overflow: hidden;
 }
 
+#nav {
+  position: fixed;
+  z-index: 100000000000;
+  width: 100%;
+  height: 5vw;
+  background-color: #00000067;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  padding-top: 0.1px;
+}
+
+#nav #links {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  cursor: pointer;
+}
+
 .video-slider {
   position: relative;
   width: 100%;
@@ -145,27 +167,6 @@ video {
 #watchHere:hover .play-triangle {
   fill: #998657;
   stroke: #998657;
-}
-
-
-#nav {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  height: 5vw;
-  background-color: #00000067;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-}
-#nav #links {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  gap: 3vw;
-  cursor: pointer;
 }
 
 /* Common underline effect for h3 and img */
@@ -788,6 +789,11 @@ video {
       color: #998657;
       text-decoration: underline;
       font-family: "DMSans";
+      transition: text-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    h2:hover {
+      text-shadow: 0 0 1px #998657, 0 0 2px #998657;
     }
   }
 }
@@ -950,5 +956,18 @@ video {
     border: 4px solid transparent;
     border-image: linear-gradient(to right, #fff, #ccc) 1;
     padding: 16px;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  /* background-color: gray; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: "DMSans";
+    color: gray;
   }
 }

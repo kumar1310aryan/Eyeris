@@ -502,8 +502,8 @@ body {
   }
 }
 
-#page2{
-  .page2-content{
+#page2 {
+  .page2-content {
     height: 12vw;
   }
 }
@@ -622,6 +622,19 @@ body {
 
 .contact-form button:hover {
   background: #998657;
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  /* background-color: gray; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: "DMSans";
+    color: gray;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1013,7 +1026,6 @@ body {
     font-weight: 400;
     font-family: "Bookman";
     margin-top: 7vw;
-
   }
   #main p {
     display: none;
@@ -1151,7 +1163,7 @@ body {
             font-family: "none";
           }
           p {
-            font-size:1.9vw;
+            font-size: 1.9vw;
             margin-top: 0.7vw;
             font-family: "DMSans";
           }
