@@ -310,9 +310,8 @@ video {
       /* width: 200px;  */
       height: auto;
       /* top: -1%; */
-      transform: translate(0,-0.25%);
+      transform: translate(0, -0.25%);
       opacity: 0;
-      
     }
   }
   #right {
@@ -883,21 +882,6 @@ video {
 .circle-logo {
   max-height: 120px;
   flex-shrink: 0;
-}
-
-.circle-logo {
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 150px;
-}
-
-.circle-logo img {
-  max-width: 70%;
-  height: auto;
 }
 
 /* Smooth infinite scroll */

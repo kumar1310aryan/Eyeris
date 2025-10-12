@@ -13,99 +13,98 @@ function loader() {
   main.style.display = "none";
 
   video.addEventListener("ended", () => {
-    // Hide the video
-    video.style.display = "none";
-    eyeris.style.opacity = 1;
-    // gsap.to(playVideoBtn, {
-    //   delay: 2,
-    //   opacity: 1,
-    // });
+  // Smoothly fade out the video before hiding it
+  gsap.to(video, {
+    duration: 1,        // fade duration (1 second)
+    opacity: 0,         // fade out to invisible
+    ease: "power2.out",
+    onComplete: () => {
+      video.style.display = "none";  // hide after fade completes
+      eyeris.style.opacity = 1;
 
-    // Make overlay visible
-    // overlayImage.style.opacity = 1;
-    // playText.style.opacity = 1;
-    nav.style.display = "block";
+      nav.style.display = "block";
 
-    const startOverlayAnimation = () => {
-      // Remove listeners so it only runs once
-      document.removeEventListener("keydown", startOverlayAnimation);
-      document.removeEventListener("click", startOverlayAnimation);
-      document.removeEventListener("touchstart", startOverlayAnimation);
+      const startOverlayAnimation = () => {
+        // Remove listeners so it only runs once
+        document.removeEventListener("keydown", startOverlayAnimation);
+        document.removeEventListener("click", startOverlayAnimation);
+        document.removeEventListener("touchstart", startOverlayAnimation);
 
-      // ✅ Call playVideo() immediately on user input
-      if (typeof firstVideo === "function") {
-        firstVideo();
-      }
+        // ✅ Call playVideo() immediately on user input
+        if (typeof firstVideo === "function") {
+          firstVideo();
+        }
 
-      const showContent = () => {
-        // ✅ Reveal nav & main only after overlay is gone
-        nav.style.display = "block"; // or "flex" if that's your layout
-        main.style.display = "block";
+        const showContent = () => {
+          // ✅ Reveal nav & main only after overlay is gone
+          nav.style.display = "block";
+          main.style.display = "block";
 
-        gsap.fromTo(main, { opacity: 0 }, { duration: 1, opacity: 1 });
-        gsap.fromTo(nav, { opacity: 1 }, { duration: 1, opacity: 1 });
+          gsap.fromTo(main, { opacity: 0 }, { duration: 1, opacity: 1 });
+          gsap.fromTo(nav, { opacity: 1 }, { duration: 1, opacity: 1 });
 
-        updateNavDisplay();
+          updateNavDisplay();
+        };
+
+        if (window.innerWidth < 500) {
+          gsap.to(overlayImage, {
+            duration: 1.8,
+            y: "-35.5%",
+            x: "15.9%",
+            scale: 0.08,
+            opacity: 0,
+            ease: "power2.inOut",
+            onComplete: () => {
+              gsap.to(overlayImage, {
+                duration: 1,
+                opacity: 0,
+                onComplete: () => {
+                  overlayImage.style.display = "none";
+                  showContent();
+                },
+              });
+            },
+          });
+        } else {
+          gsap.to(center, {
+            duration: 1.5,
+            ease: "power3.out",
+          });
+
+          gsap.to(eyeris, {
+            duration: 1.5,
+            width: "12.5vw",
+            x: "22vw",
+            y: "3vw",
+            ease: "power3.out",
+          });
+
+          gsap.to("#links", {
+            duration: 1.5,
+            gap: "15vw",
+            ease: "power3.out",
+            onComplete: showContent,
+          });
+        }
+
+        gsap.to(loader, {
+          delay: 5,
+          zIndex: -5,
+        });
       };
 
-      if (window.innerWidth < 500) {
-        gsap.to(overlayImage, {
-          duration: 1.8,
-          y: "-35.5%",
-          x: "15.9%",
-          scale: 0.08,
-          opacity: 0,
-          ease: "power2.inOut",
-          onComplete: () => {
-            gsap.to(overlayImage, {
-              duration: 1,
-              opacity: 0,
-              onComplete: () => {
-                overlayImage.style.display = "none";
-                showContent(); // ✅ show nav & main here
-              },
-            });
-          },
-        });
-      } else {
-        gsap.to(center, {
-          duration: 1.5,
-          // width: "20%",
-          // width: "7%",
-          // top: "-10%",
-          ease: "power3.out",
-        });
+      // Ensure document is focusable and focused
+      document.body.tabIndex = -1;
+      document.body.focus();
 
-        gsap.to(eyeris, {
-          duration: 1.5,
-          width: "12.5vw",
-          x: "22vw",
-          y: "3vw",
-          ease: "power3.out",
-        });
-        gsap.to("#links", {
-          duration: 1.5,
-          gap: "15vw", // or whatever spacing feels good
-          ease: "power3.out",
-          onComplete: showContent,
-        });
-      }
-
-      gsap.to(loader, {
-        delay: 5,
-        zIndex: -5,
-      });
-    };
-
-    // Ensure document is focusable and focused
-    document.body.tabIndex = -1;
-    document.body.focus();
-
-    // Listen for any key/click/touch
-    document.addEventListener("keydown", startOverlayAnimation);
-    document.addEventListener("click", startOverlayAnimation);
-    document.addEventListener("touchstart", startOverlayAnimation);
+      // Listen for any key/click/touch
+      document.addEventListener("keydown", startOverlayAnimation);
+      document.addEventListener("click", startOverlayAnimation);
+      document.addEventListener("touchstart", startOverlayAnimation);
+    }
   });
+});
+
 }
 
 function updateNavDisplay() {
