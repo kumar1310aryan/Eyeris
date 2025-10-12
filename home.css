@@ -23,6 +23,18 @@ body {
   color: #fff;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: auto; /* keep scroll functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and old Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; 
+}
 /* main */
 .main {
   position: relative;
@@ -172,7 +184,6 @@ video {
 #progressCircle {
   transition: stroke-dashoffset 0.2s linear;
 }
-
 
 /* Common underline effect for h3 and img */
 #nav #links h3,
