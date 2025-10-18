@@ -50,6 +50,20 @@ body::-webkit-scrollbar {
   display: block;
 }
 
+#verticalArrow {
+  position: relative;
+  left: 50%;
+  top: 86%;
+  transform: translate(-50%, -50%);
+}
+
+#textSvg{
+  position: relative;
+  left: 50%;
+  top: 82%;
+  transform: translate(-82%,-50%);
+}
+
 /* Make overlay responsive relative to video frame */
 /* #overlayImage {
   position: absolute;
@@ -60,15 +74,7 @@ body::-webkit-scrollbar {
   pointer-events: none;
 } */
 
-#loader p {
-  position: absolute;
-  font-size: 2.2vw;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "DMSans";
-  opacity: 0;
-}
+
 
 /* main */
 .main {
