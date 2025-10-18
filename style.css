@@ -869,7 +869,6 @@ video {
 
     h2:hover {
       text-shadow: 0 0 1px #998657, 0 0 2px #635737;
-      
     }
   }
 }
@@ -1020,11 +1019,15 @@ video {
   }
 }
 
-.footer{
+.footer {
   width: 100%;
-  height: 10vh;
-  background-color: gray;
+  height: 5vh;
+  /* background-color: gray; */
   display: flex;
   align-items: center;
   justify-content: center;
+  p {
+    font-family: "DMSans";
+    color: gray;
+  }
 }
