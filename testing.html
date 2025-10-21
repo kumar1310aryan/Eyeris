@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Vertical Arrow</title>
+  <style>
+    body {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .arrow-container {
+      width: 60px;
+      height: 260px;
+      cursor: pointer;
+    }
+
+    svg {
+      width: 40px;
+      height: 100%;
+    }
+
+    svg .shaft {
+      transition: d 0.5s ease;
+    }
+
+    svg .head {
+      transition: transform 0.5s ease;
+      transform-origin: center top;
+    }
+
+    /* On hover: extend the line slightly and move head a bit */
+    .arrow-container:hover svg .shaft {
+      d: path("M12 2V130"); /* shorter extension */
+    }
+
+    .arrow-container:hover svg .head {
+      transform: translateY(30px); /* move arrowhead down in sync */
+    }
+  </style>
+</head>
+<body>
+  <div class="arrow-container">
+    <svg
+      id="verticalArrow"
+      viewBox="0 0 24 160"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Shaft (longer initially, good proportion) -->
+      <path
+        class="shaft"
+        d="M12 2V100"
+        stroke="white"
+        stroke-width="0.7"
+        stroke-linecap="round"
+      />
+
+      <!-- Arrowhead (moves down with shaft) -->
+      <g class="head">
+        <path
+          d="M12 100L8 96M12 100L16 96"
+          stroke="white"
+          stroke-width="0.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+    </svg>
+  </div>
+</body>
+</html>

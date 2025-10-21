@@ -9,10 +9,14 @@ function loader() {
   const center = document.querySelector("#links #center");
   const svg = document.querySelector("#verticalArrow");
   const textSvg = document.querySelector("#textSvg");
+  const arrowContainer = document.querySelector(".arrow-container")
 
-  // ✅ Ensure main and nav start hidden
+  
+
+  
   nav.style.display = "none";
   main.style.display = "none";
+  arrowContainer.style.display="none";
 
   video.addEventListener("ended", () => {
     // Smoothly fade out the video before hiding it
@@ -23,6 +27,7 @@ function loader() {
       onComplete: () => {
         video.style.display = "none"; // hide after fade completes
         eyeris.style.opacity = 1;
+        arrowContainer.style.display="block";
 
         nav.style.display = "block";
 
@@ -41,7 +46,6 @@ function loader() {
             // ✅ Reveal nav & main only after overlay is gone
             nav.style.display = "block";
             main.style.display = "block";
-            
 
             gsap.fromTo(main, { opacity: 0 }, { duration: 1, opacity: 1 });
             gsap.fromTo(nav, { opacity: 1 }, { duration: 1, opacity: 1 });
@@ -74,12 +78,14 @@ function loader() {
               ease: "power3.out",
             });
             textSvg.style.display = "none";
-
+            eyeris.addEventListener("click", () => {
+              window.location.href = "home.html";
+            });
             gsap.to(svg, {
-              scale: 1.4, // scale up
+              scale: 1.3, // scale up
               duration: 1.3, // animate for 1.3 seconds
               ease: "power2.out", // smooth easing
-              transformOrigin: "center center",
+              transformOrigin: "top center",
               onComplete: () => {
                 gsap.to(svg, {
                   opacity: 0, // fade out
@@ -308,6 +314,8 @@ function firstVideo() {
       overlayTitle.textContent = v.title;
       overlayDesc.textContent = v.desc;
       watchHere.onclick = () => window.open(v.link, "_blank");
+      watchHere.style.cursor = "none";
+
 
       // Reset progress
       progressCircle.style.strokeDashoffset = circumference;
@@ -341,3 +349,15 @@ function firstVideo() {
   });
 }
 firstVideo();
+
+function sheryAnimation() {
+  Shery.mouseFollower();
+}
+
+function checkWidthAndAnimate() {
+  if (window.innerWidth > 500) {
+    sheryAnimation();
+  }
+}
+
+checkWidthAndAnimate();

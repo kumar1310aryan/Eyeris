@@ -21,6 +21,7 @@ body {
   width: 100%;
   background-color: #000;
   color: #fff;
+  cursor: none;
 }
 
 html,
@@ -50,18 +51,47 @@ body::-webkit-scrollbar {
   display: block;
 }
 
-#verticalArrow {
-  position: relative;
+.arrow-container {
+  width: 60px;
+  height: 260px;
+  /* cursor: pointer; */
+  position: absolute;
   left: 50%;
   top: 86%;
   transform: translate(-50%, -50%);
+
+  svg {
+    width: 40px;
+    height: 100%;
+    z-index: 999999999999999999999999999999999999999999999999999999999;
+  }
+
+  svg .shaft {
+    transition: d 0.5s ease;
+  }
+
+  svg .head {
+    transition: transform 0.5s ease;
+    transform-origin: center top;
+  }
 }
 
-#textSvg{
+/* On hover: extend the line slightly and move head a bit */
+.arrow-container:hover svg .shaft {
+  d: path("M12 2V130"); /* shorter extension */
+}
+
+.arrow-container:hover svg .head {
+  transform: translateY(30px); /* move arrowhead down in sync */
+}
+
+
+
+#textSvg {
   position: relative;
   left: 50%;
-  top: 82%;
-  transform: translate(-82%,-50%);
+  top: 96%;
+  transform: translate(-50%, -50%);
 }
 
 /* Make overlay responsive relative to video frame */
@@ -73,8 +103,6 @@ body::-webkit-scrollbar {
   opacity: 0;
   pointer-events: none;
 } */
-
-
 
 /* main */
 .main {
@@ -221,7 +249,7 @@ video {
   align-items: center;
   justify-content: center;
   gap: 4vw;
-  cursor: pointer;
+  /* cursor: pointer; */
   /* z-index: 100000000000000; */
 }
 
@@ -267,7 +295,7 @@ video {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  cursor: pointer;
+  /* cursor: pointer; */
   user-select: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(65, 64, 64, 0.2);
@@ -322,6 +350,7 @@ video {
       /* top: -1%; */
       transform: translate(0, -0.25%);
       opacity: 0;
+      /* cursor: pointer; */
     }
   }
   #right {
@@ -574,7 +603,7 @@ video {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(0px);
   margin-top: 3vw;
@@ -678,7 +707,7 @@ video {
       align-items: center;
       font-size: 1.5rem;
       border-radius: 20px;
-      cursor: pointer;
+      /* cursor: pointer; */
       transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
@@ -959,6 +988,7 @@ video {
   /* font-weight: bold; */
   text-decoration: none;
   transition: background 0.3s ease;
+  cursor: none;
 }
 
 .contact-btn:hover {
@@ -1000,7 +1030,7 @@ video {
   font-weight: bold;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: none;
   transition: background 0.3s ease;
 }
 
