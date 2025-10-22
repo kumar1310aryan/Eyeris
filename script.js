@@ -82,8 +82,8 @@ function loader() {
               window.location.href = "home.html";
             });
             gsap.to(svg, {
-              scale: 1.3, // scale up
-              duration: 1.3, // animate for 1.3 seconds
+              scale: 1.15, // scale up
+              duration: 1.1, // animate for 1.3 seconds
               ease: "power2.out", // smooth easing
               transformOrigin: "top center",
               onComplete: () => {
@@ -352,6 +352,7 @@ firstVideo();
 
 function sheryAnimation() {
   Shery.mouseFollower();
+  Shery.makeMagnet(".magnet");
 }
 
 function checkWidthAndAnimate() {
@@ -361,3 +362,13 @@ function checkWidthAndAnimate() {
 }
 
 checkWidthAndAnimate();
+
+document.querySelector('.arrow-container2').addEventListener('click', function() {
+  window.scrollBy({
+    top: window.innerHeight,  // scroll by 100vh
+    behavior: 'smooth'        // smooth/slow scroll
+  });
+});
+
+
+

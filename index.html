@@ -44,7 +44,7 @@
           <path
             class="shaft"
             d="M12 2V100"
-            stroke="white"
+            stroke="#998657"
             stroke-width="0.7"
             stroke-linecap="round"
           />
@@ -53,7 +53,7 @@
           <g class="head">
             <path
               d="M12 100L8 96M12 100L16 96"
-              stroke="white"
+              stroke="#998657"
               stroke-width="0.7"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -208,6 +208,34 @@
             <p>Watch Here</p>
           </div>
         </div>
+        <div class="arrow-container2">
+          <svg
+            id="verticalArrow"
+            viewBox="0 0 24 160"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Shaft (longer initially, good proportion) -->
+            <path
+              class="shaft"
+              d="M12 2V100"
+              stroke="#967f44"
+              stroke-width="0.7"
+              stroke-linecap="round"
+            />
+
+            <!-- Arrowhead (moves down with shaft) -->
+            <g class="head">
+              <path
+                d="M12 100L8 96M12 100L16 96"
+                stroke="#967f44"
+                stroke-width="0.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
       </div>
 
       <div class="page1">
@@ -312,7 +340,7 @@
         </div>
         <div class="btndiv">
           <button
-            class="learn-btn"
+            class="learn-btn magnet"
             onclick="window.location.href='WhoWeAre.html'"
           >
             Learn more
@@ -453,6 +481,7 @@
           <h2
             onclick="window.open('https://www.deccanchronicle.com/nation/current-affairs/060618/in-luv-kush-land-plastic-the-new-ravana.html', '_blank')"
             style="cursor: pointer"
+            class="magnet"
           >
             In Luv-Kush land, plastic the new Ravana
           </h2>
@@ -461,6 +490,7 @@
           <h2
             onclick="window.open('https://www.newindianexpress.com/cities/bengaluru/2019/Jun/22/hisss-story-busting-serpentine-myths-1993644.html', '_blank')"
             style="cursor: pointer"
+            class="magnet"
           >
             Hisss story: busting serpentine myths
           </h2>
@@ -469,6 +499,7 @@
           <h2
             onclick="window.open('https://www.thehindu.com/sci-tech/energy-and-environment/one-tree-at-a-time/article29962919.ece', '_blank')"
             style="cursor: pointer"
+            class="magnet"
           >
             One tree at a time
           </h2>
@@ -477,6 +508,7 @@
           <h2
             onclick="window.open('https://timesofindia.indiatimes.com/city/bengaluru/govt-school-kids-to-launch-mega-sapling-drive-today/articleshow/72049205.cms', '_blank')"
             style="cursor: pointer"
+            class="magnet"
           >
             Govt school kids to launch mega sapling drive today
           </h2>
@@ -651,7 +683,7 @@
                 action.</em
               >
             </p>
-            <a href="ContactUS.html" class="contact-btn">Contact Us ↗</a>
+            <a href="ContactUS.html" class="contact-btn"><span class="magnet">Contact Us ↗</span></a>
           </div>
 
           <!-- Right side (form) -->
@@ -666,7 +698,7 @@
               <input type="text" name="phone" placeholder="Phone" required />
               <input type="email" name="email" placeholder="Email" required />
               <textarea name="message" placeholder="Message"></textarea>
-              <button type="submit">Submit</button>
+              <button type="submit" ><span class="magnet">Submit</span></button>
             </form>
           </div>
         </section>
@@ -732,6 +764,5 @@
     ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-    
   </body>
 </html>
