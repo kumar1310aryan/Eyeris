@@ -10,7 +10,6 @@ function loader() {
   const svg = document.querySelector("#verticalArrow");
   const textSvg = document.querySelector("#textSvg");
   const arrowContainer = document.querySelector(".arrow-container");
-  const arrowContainer2 = document.querySelector(".arrow-container2");
 
   nav.style.display = "none";
   main.style.display = "none";
@@ -34,6 +33,7 @@ function loader() {
           document.removeEventListener("keydown", startOverlayAnimation);
           document.removeEventListener("click", startOverlayAnimation);
           document.removeEventListener("touchstart", startOverlayAnimation);
+          // document.removeEventListener("scroll", startOverlayAnimation);
 
           // ✅ Call playVideo() immediately on user input
           if (typeof firstVideo === "function") {
@@ -123,6 +123,7 @@ function loader() {
         document.addEventListener("keydown", startOverlayAnimation);
         document.addEventListener("click", startOverlayAnimation);
         document.addEventListener("touchstart", startOverlayAnimation);
+        // document.addEventListener("scroll", startOverlayAnimation, { once: true });
       },
     });
   });
@@ -359,14 +360,3 @@ function checkWidthAndAnimate() {
 }
 
 checkWidthAndAnimate();
-
-document
-  .querySelector(".arrow-container2")
-  .addEventListener("click", function () {
-    window.scrollBy({
-      top: window.innerHeight, // scroll by 100vh
-      behavior: "smooth", // smooth/slow scroll
-    });
-  });
-
-
