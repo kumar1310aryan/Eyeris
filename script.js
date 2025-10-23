@@ -9,14 +9,12 @@ function loader() {
   const center = document.querySelector("#links #center");
   const svg = document.querySelector("#verticalArrow");
   const textSvg = document.querySelector("#textSvg");
-  const arrowContainer = document.querySelector(".arrow-container")
+  const arrowContainer = document.querySelector(".arrow-container");
+  const arrowContainer2 = document.querySelector(".arrow-container2");
 
-  
-
-  
   nav.style.display = "none";
   main.style.display = "none";
-  arrowContainer.style.display="none";
+  arrowContainer.style.display = "none";
 
   video.addEventListener("ended", () => {
     // Smoothly fade out the video before hiding it
@@ -27,7 +25,7 @@ function loader() {
       onComplete: () => {
         video.style.display = "none"; // hide after fade completes
         eyeris.style.opacity = 1;
-        arrowContainer.style.display="block";
+        arrowContainer.style.display = "block";
 
         nav.style.display = "block";
 
@@ -316,7 +314,6 @@ function firstVideo() {
       watchHere.onclick = () => window.open(v.link, "_blank");
       watchHere.style.cursor = "none";
 
-
       // Reset progress
       progressCircle.style.strokeDashoffset = circumference;
 
@@ -363,12 +360,13 @@ function checkWidthAndAnimate() {
 
 checkWidthAndAnimate();
 
-document.querySelector('.arrow-container2').addEventListener('click', function() {
-  window.scrollBy({
-    top: window.innerHeight,  // scroll by 100vh
-    behavior: 'smooth'        // smooth/slow scroll
+document
+  .querySelector(".arrow-container2")
+  .addEventListener("click", function () {
+    window.scrollBy({
+      top: window.innerHeight, // scroll by 100vh
+      behavior: "smooth", // smooth/slow scroll
+    });
   });
-});
-
 
 

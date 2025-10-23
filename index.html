@@ -153,6 +153,34 @@
       </div>
     </div>
     <div class="main">
+      <div class="arrow-container2">
+        <svg
+          id="verticalArrow"
+          viewBox="0 0 24 160"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Shaft (longer initially, good proportion) -->
+          <path
+            class="shaft"
+            d="M12 2V100"
+            stroke="#967f44"
+            stroke-width="0.7"
+            stroke-linecap="round"
+          />
+
+          <!-- Arrowhead (moves down with shaft) -->
+          <g class="head">
+            <path
+              d="M12 100L8 96M12 100L16 96"
+              stroke="#967f44"
+              stroke-width="0.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </svg>
+      </div>
       <div id="home">
         <div class="video-slider">
           <video id="mainVideo" autoplay muted loop></video>
@@ -207,34 +235,6 @@
 
             <p>Watch Here</p>
           </div>
-        </div>
-        <div class="arrow-container2">
-          <svg
-            id="verticalArrow"
-            viewBox="0 0 24 160"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- Shaft (longer initially, good proportion) -->
-            <path
-              class="shaft"
-              d="M12 2V100"
-              stroke="#967f44"
-              stroke-width="0.7"
-              stroke-linecap="round"
-            />
-
-            <!-- Arrowhead (moves down with shaft) -->
-            <g class="head">
-              <path
-                d="M12 100L8 96M12 100L16 96"
-                stroke="#967f44"
-                stroke-width="0.7"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-          </svg>
         </div>
       </div>
 
@@ -683,7 +683,9 @@
                 action.</em
               >
             </p>
-            <a href="ContactUS.html" class="contact-btn"><span class="magnet">Contact Us ↗</span></a>
+            <a href="ContactUS.html" class="contact-btn"
+              ><span class="magnet">Contact Us ↗</span></a
+            >
           </div>
 
           <!-- Right side (form) -->
@@ -698,7 +700,7 @@
               <input type="text" name="phone" placeholder="Phone" required />
               <input type="email" name="email" placeholder="Email" required />
               <textarea name="message" placeholder="Message"></textarea>
-              <button type="submit" ><span class="magnet">Submit</span></button>
+              <button type="submit"><span class="magnet">Submit</span></button>
             </form>
           </div>
         </section>
@@ -764,5 +766,6 @@
     ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    
   </body>
 </html>
