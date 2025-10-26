@@ -8,10 +8,11 @@
   }
 
   #loader {
-    position: absolute; /* makes child elements position relative to this container */
+    position: absolute;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    display: none;
   }
 
   #loader video {

@@ -140,12 +140,13 @@ function updateNavDisplay() {
     nav2.style.display = "block";
   } else {
     nav.style.display = "block";
+    // loader();
   }
 }
 
 window.addEventListener("resize", updateNavDisplay);
-
 loader();
+
 const boxes = document.querySelectorAll(".box");
 const container = document.querySelector(".container");
 
