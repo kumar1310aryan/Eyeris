@@ -123,6 +123,11 @@ function loader() {
         document.addEventListener("keydown", startOverlayAnimation);
         document.addEventListener("click", startOverlayAnimation);
         document.addEventListener("touchstart", startOverlayAnimation);
+        // Listen for any user interaction: key, click, touch, or scroll
+        ["keydown", "click", "touchstart", "wheel", "scroll"].forEach((evt) => {
+          document.addEventListener(evt, startOverlayAnimation, { once: true });
+        });
+
         // document.addEventListener("scroll", startOverlayAnimation, { once: true });
       },
     });
