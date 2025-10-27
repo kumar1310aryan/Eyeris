@@ -12,7 +12,22 @@ function loader() {
   const arrowContainer = document.querySelector(".arrow-container");
 
   nav.style.display = "none";
-  main.style.display = "none";
+  // const main = document.querySelector(".main");
+
+  function checkWindowSize2() {
+    if (window.innerWidth > 500) {
+      main.style.display = "none";
+    } else {
+      main.style.display = "block"; // or your default display
+    }
+  }
+
+  // Run once on load
+  checkWindowSize2();
+
+  // Run every time the window is resized
+  window.addEventListener("resize", checkWindowSize2);
+
   arrowContainer.style.display = "none";
 
   video.addEventListener("ended", () => {
@@ -134,10 +149,12 @@ function loader() {
   });
 }
 
+const main = document.querySelector(".main");
 function updateNavDisplay() {
   if (window.innerWidth < 500) {
     nav.style.display = "none";
     nav2.style.display = "block";
+    main.style.display = "block";
   } else {
     nav.style.display = "block";
     // loader();

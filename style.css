@@ -57,7 +57,7 @@ body::-webkit-scrollbar {
   /* cursor: pointer; */
   position: absolute;
   left: 50%;
-  top: 87%;
+  top: 91%;
   transform: translate(-50%, -50%);
 
   svg {

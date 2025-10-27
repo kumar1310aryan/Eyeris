@@ -386,7 +386,6 @@ body {
   background: #998657;
 }
 
-
 .footer {
   width: 100%;
   height: 5vh;
@@ -669,6 +668,21 @@ body {
   .contact-form {
     margin-top: -5vw;
     padding: 2vw;
+  }
+  .footer {
+    width: 100%;
+    height: 5vh;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink; */
+    top: 10vh;
+    p {
+      font-family: "DMSans";
+      color: gray;
+      font-size: 13px;
+    }
   }
 }
 

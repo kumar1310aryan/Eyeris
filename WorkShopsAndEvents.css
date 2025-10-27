@@ -419,7 +419,6 @@ body {
   background: #998657;
 }
 
-
 .footer {
   width: 100%;
   height: 5vh;
@@ -546,6 +545,7 @@ body {
   .page5 {
     margin-top: 8vw;
     width: 100%;
+    height: 127vh;
   }
   .box1 {
     /* padding: 6vw 6vw 4vw 6vw; */
@@ -608,6 +608,22 @@ body {
   .contact-form {
     margin-top: -5vw;
     padding: 2vw;
+  }
+
+  .footer {
+    width: 100%;
+    height: 5vh;
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink; */
+    top: 10vh;
+    p {
+      font-family: "DMSans";
+      color: gray;
+      font-size: 13px;
+    }
   }
 }
 
