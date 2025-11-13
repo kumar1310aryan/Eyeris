@@ -720,7 +720,7 @@ video {
           justify-content: center;
           /* margin-left: -5vw; */
           p {
-            font-size: 1.75vw;
+            font-size: 1.4vw;
             color: #998657;
             /* font-weight: 600; */
           }
@@ -832,11 +832,11 @@ video {
     margin-top: 3vw;
 
     p {
-      font-size: 1.4vw;
+      font-size: 1.3vw;
       font-family: "DMSans";
     }
     h2 {
-      font-size: 2.5vw;
+      font-size: 2.1vw;
       margin-top: 0.5vw;
       color: #998657;
       text-decoration: underline;
