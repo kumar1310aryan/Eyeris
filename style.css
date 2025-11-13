@@ -21,7 +21,7 @@ body {
   width: 100%;
   background-color: #000;
   color: #fff;
-  cursor: none;
+  /* cursor: none; */
 }
 
 html,
@@ -54,7 +54,7 @@ body::-webkit-scrollbar {
 .arrow-container {
   width: 60px;
   height: 260px;
-  /* cursor: pointer; */
+  cursor: pointer;
   position: absolute;
   left: 50%;
   top: 91%;
@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
 .arrow-container2 {
   width: 60px;
   height: 260px;
-  /* cursor: pointer; */
+  cursor: pointer;
   position: absolute;
   left: 50.5%;
   top: 100vh;
@@ -243,6 +243,7 @@ video {
 /* Hover Effects */
 #watchHere:hover {
   color: #bca86c;
+  /* cursor: pointer; */
 }
 
 #watchHere:hover .play-triangle {
@@ -283,7 +284,7 @@ video {
   align-items: center;
   justify-content: center;
   gap: 4vw;
-  /* cursor: pointer; */
+  cursor: pointer;
   /* z-index: 100000000000000; */
 }
 
@@ -329,7 +330,7 @@ video {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  /* cursor: pointer; */
+  cursor: pointer;
   user-select: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(65, 64, 64, 0.2);
@@ -384,7 +385,7 @@ video {
       /* top: -1%; */
       transform: translate(0, -0.25%);
       opacity: 0;
-      /* cursor: pointer; */
+      cursor: pointer;
     }
   }
   #right {
@@ -637,7 +638,7 @@ video {
   background: #1a1a1a;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  cursor: none;
+  /* cursor: none; */
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(0px);
   margin-top: 3vw;
@@ -648,6 +649,7 @@ video {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 /* page2  */
@@ -741,7 +743,7 @@ video {
       align-items: center;
       font-size: 1.5rem;
       border-radius: 20px;
-      /* cursor: pointer; */
+      cursor: pointer;
       transition: all 0.5s ease;
       position: relative;
       overflow: hidden;
@@ -1022,12 +1024,13 @@ video {
   /* font-weight: bold; */
   text-decoration: none;
   transition: background 0.3s ease;
-  cursor: none;
+  /* cursor: none; */
 }
 
 .contact-btn:hover {
   background: #998657;
   color: #000;
+  cursor: pointer;
 }
 
 /* Right side (form) */
@@ -1064,12 +1067,13 @@ video {
   font-weight: bold;
   border: none;
   border-radius: 6px;
-  cursor: none;
+  /* cursor: none; */
   transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
   background: #998657;
+  cursor: pointer;
 }
 
 /* #playImg{

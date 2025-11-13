@@ -371,15 +371,15 @@ function firstVideo() {
 }
 firstVideo();
 
-function sheryAnimation() {
-  Shery.mouseFollower();
-  Shery.makeMagnet(".magnet");
-}
+// function sheryAnimation() {
+//   Shery.mouseFollower();
+//   Shery.makeMagnet(".magnet");
+// }
 
-function checkWidthAndAnimate() {
-  if (window.innerWidth > 500) {
-    sheryAnimation();
-  }
-}
+// function checkWidthAndAnimate() {
+//   if (window.innerWidth > 500) {
+//     sheryAnimation();
+//   }
+// }
 
-checkWidthAndAnimate();
+// checkWidthAndAnimate();

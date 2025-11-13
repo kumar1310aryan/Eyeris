@@ -89,6 +89,34 @@
       </div>
     </div>
     <div class="main">
+      <div class="arrow-container2">
+        <svg
+          id="verticalArrow"
+          viewBox="0 0 24 160"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Shaft (longer initially, good proportion) -->
+          <path
+            class="shaft"
+            d="M12 2V100"
+            stroke="#967f44"
+            stroke-width="0.7"
+            stroke-linecap="round"
+          />
+
+          <!-- Arrowhead (moves down with shaft) -->
+          <g class="head">
+            <path
+              d="M12 100L8 96M12 100L16 96"
+              stroke="#967f44"
+              stroke-width="0.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </svg>
+      </div>
       <div id="home">
         <div class="video-slider">
           <video id="mainVideo" autoplay muted loop></video>
@@ -495,9 +523,9 @@
 
             <!-- duplicate set for infinite scroll -->
             <img
-                src="./Clients and collaborators logos/Kalinga Foundation logo.png"
-                alt="Kalinga Foundation"
-              />
+              src="./Clients and collaborators logos/Kalinga Foundation logo.png"
+              alt="Kalinga Foundation"
+            />
             <img
               src="./Clients and collaborators logos/KCRE_Logo.png"
               alt="KCRE"
